@@ -13,8 +13,6 @@ let path = window.location.pathname;
 let page = path.split("/").pop();
 
 
-
-console.log(page)
 let A_accueil=document.getElementById("acueil-link");
 let A_callisthenie=document.getElementById("calisthenics-link");
 let A_gym=document.getElementById("gym-link");
@@ -37,5 +35,5 @@ if(page==="acueil.html"){
     A_creerEntrainement.className+=" active";
 }
 
-console.log(A_aPropos,A_accueil,A_callisthenie,A_creerEntrainement,A_gym,A_running,A_crossfit);
+// console.log(A_aPropos,A_accueil,A_callisthenie,A_creerEntrainement,A_gym,A_running,A_crossfit);
 
