@@ -2,9 +2,7 @@ let ajouterbutton = document.getElementById("ajouter-button");
 let annulerbutton = document.getElementById("vider-button");
 ajouterbutton.href = "javascript:ajouter()";
 annulerbutton.href = "javascript:vider()";
-
 let table = document.getElementById("table");
-
 
 function ajouter() {
 
