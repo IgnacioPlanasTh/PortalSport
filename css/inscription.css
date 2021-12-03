@@ -2,8 +2,98 @@ input, select{
     border:2px solid transparent;
     background-color:#FF0080 ;
     color: black;
+    /* width: 100%; */
+}
+
+input, label{
+    padding-left: auto;
+    padding-right: auto;
+}
+
+input:focus {
+    color: white;
+}
+
+input, select{
+    color: white;
 }
 
 input:hover, select:hover{
     border:2px solid black;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.7;
+  }
+
+
+/* ====================================================== */
+/* grid structure for the form */ 
+/* ====================================================== */
+#grid-nom{grid-area: nom;}
+#grid-prenom{grid-area: prenom;}
+#grid-telephone{grid-area: telephone;}
+#grid-email{grid-area: email;}
+#grid-mot-de-passe{grid-area: password;}
+#grid-payment{grid-area: payment;}
+#grid-sport{grid-area: sport;}
+#grid-ajouter{grid-area: ajouter;}
+#grid-vider{grid-area: annuler;}
+
+form.form-grid-container div{
+    padding: 1em;
+}
+
+@media screen and (min-width: 780px) {
+    .form-grid-container{
+        display: grid;
+        grid-template-areas: 
+        "nom       prenom"
+        "telephone email"
+        "password  password"
+        "payment   sport"
+        "ajouter   annuler";
+        grid-gap: 5px;
+        border: 2px solid white;
+        border-radius: 20px;
+        width:auto;
+    }
+
+    form.form-grid-container div{
+        margin-left:auto;
+        margin-right: auto;
+      }
+}
+
+
+/* ====================================================== */
+/* grid structure for the table */ 
+/* ====================================================== */
+
+.table-grid-container{
+    width:auto;
+    margin:1em;
+    display: grid;
+    grid-template-columns:auto auto auto auto auto auto;
+    grid-gap: 0px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+
+#table{
+    white-space: nowrap;
+    overflow-x:auto;
+}
+
+#table div{
+    text-align: center;
+    white-space:nowrap;
+    padding: 4px;
+}
+
+
+#table .header{
+    border-bottom: 1px solid white;
 }
