@@ -1,0 +1,9 @@
+input, select{
+    border:2px solid transparent;
+    background-color:#FF0080 ;
+    color: black;
+}
+
+input:hover, select:hover{
+    border:2px solid black;
+}
