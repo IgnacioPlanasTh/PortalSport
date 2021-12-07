@@ -1,13 +1,9 @@
-        <!-- Formulaire pour remplir dinamiquement une tableau:
-        donées: Nom, prenom, date, sport, email, Mode Payment -->
-
-
-
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
     <title>
         Inscription
     </title>
@@ -16,19 +12,22 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/buttons.css'>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/logo_icon.png">
 </head>
 
 <body>
 
-    <div id="menu">
+    <div class="sticky" id="menu">
         <div class="topnav" id="myTopnav">
-            <a id="Accueil-link"href="Accueil.html">Accueil</a>
+            <a id="menu-link" href="">Menu</a>
+            <a id="Accueil-link" href="Accueil.html">Accueil</a>
             <a id="Callisthenie-link" href="Callisthenie.html">Callisthenie</a>
-            <a id="Crossfit-link"href="Crossfit.html">Crossfit</a>
-            <a id="Fitness-link"href="Fitness.html">Fitness</a>
-            <a id="Running-link"href="Running.html">Running</a>
-            <a id="creerEntrainement-link"href="creerEntrainement.html">Créez votre entrainement</a>
+            <a id="Crossfit-link" href="Crossfit.html">Crossfit</a>
+            <a id="Fitness-link" href="Fitness.html">Fitness</a>
+            <a id="Running-link" href="Running.html">Running</a>
+            <a id="creerEntrainement-link" href="creerEntrainement.html">Créez votre entrainement</a>
             <a id="contact-link" href="contact.html">Contact</a>
+            <a id="inscription-link" href="Inscription.html">Inscrivez-vous</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -40,8 +39,10 @@
     <div class="grid-container-no-video">
         <div class="grid-leftLines grid-lines"></div>
         <div class="grid-rightLines grid-lines"></div>
-        <div class="grid-logo"><img class="logo" src="images/logo.png"></div>
-        <div class="grid-header"><h1>S'INSCRIRE</h1></div>
+        <div class="grid-logo"><img class="logo" src="images/logo.png" alt="logo"></div>
+        <div class="grid-header">
+            <h1>S'inscrire</h1>
+        </div>
         <div class="grid-text">
             <div id="main"></div>
 
@@ -49,46 +50,56 @@
             <form id="formulaire" class="form-grid-container">
 
                 <div id="grid-nom">
-                <label for="nom" class="text-center"><b>Nom</b></label><br>
-                <input type ="text" id="nom" name="nom" placeholder="nom">
+                    <label for="nom" class="text-center"><b>Nom</b></label><br>
+                    <input type="text" id="nom" name="nom" placeholder="nom">
                 </div>
 
                 <div id="grid-prenom">
-                <label for="prenom" class="text-center"><b>Prenom</b></label><br>
-                <input type ="text" id="prenom" name="prenom" placeholder="prenom"></div>
+                    <label for="prenom" class="text-center"><b>Prenom</b></label><br>
+                    <input type="text" id="prenom" name="prenom" placeholder="prenom">
+                </div>
 
                 <div id="grid-telephone">
-                <label for="telephone" class="text-center"><b>Telephone</b></label><br>
-                <input type ="text" id="telephone" name="telephone" placeholder="telephone"></div>
+                    <label for="telephone" class="text-center"><b>Telephone</b></label><br>
+                    <input type="text" id="telephone" name="telephone" placeholder="telephone">
+                </div>
 
                 <div id="grid-email">
-                <label for="email" class="text-center"><b>Email</b></label><br>
-                <input type ="email" id="email" name="email" placeholder="mail@exemple.com"></div>
+                    <label for="email" class="text-center"><b>Email</b></label><br>
+                    <input type="email" id="email" name="email" placeholder="mail@exemple.com">
+                </div>
 
                 <div id="grid-mot-de-passe">
-                <label for="password" class="text-center"><b>Mot de passe</b></label><br>
-                <input type ="password" id="password" name="password"></div>
+                    <label for="password" class="text-center"><b>Mot de passe</b></label><br>
+                    <input type="password" id="password" name="password">
+                </div>
 
                 <div id="grid-payment">
-                <label for="payment"><b>Mode de payment: </b></label><select name ="payment">
-                    <option value="Mastercard" id="payment-option">Mastercard</option>
-                    <option value="Visa">Visa</option>
-                    <option value="American Express">American Express</option>
-                    <option value="Carte bleue">Carte bleue</option>
-                    <option value="Maestro">Maestro</option>
-                    <option value="Paypal">Paypal</option>
-                </select></div>
+                    <label for="payment"><b>Mode de payment: </b></label><select id="payment" name="payment">
+                        <option value="Mastercard" id="payment-option">Mastercard</option>
+                        <option value="Visa">Visa</option>
+                        <option value="American Express">American Express</option>
+                        <option value="Carte bleue">Carte bleue</option>
+                        <option value="Maestro">Maestro</option>
+                        <option value="Paypal">Paypal</option>
+                    </select>
+                </div>
 
                 <div id="grid-sport">
-                <label for="payment"><b>Sport (coût/entraînement) </b></label><select name ="sport">
-                    <option value="Callisthenie" id="callisthenie-option">Callisthenie (12€)</option>
-                    <option value="Crossfit">Crossfit (17€)</option>
-                    <option value="Fitness">Fitness (15€)</option>
-                    <option value="Running">Running (7€)</option>
-                </select></div>
+                    <label for="sport"><b>Sport (coût/entraînement) </b></label><select id="sport" name="sport">
+                        <option value="Callisthenie" id="callisthenie-option">Callisthenie (12€)</option>
+                        <option value="Crossfit">Crossfit (17€)</option>
+                        <option value="Fitness">Fitness (15€)</option>
+                        <option value="Running">Running (7€)</option>
+                    </select>
+                </div>
 
-                <div id="grid-ajouter"><p><a class="button" id="ajouter-button">Ajouter</a></p></div>
-                <div id="grid-vider"><p><a class="button" id="vider-button">Vider tableau</a></p></div>
+                <div id="grid-ajouter">
+                    <p><a class="button" id="ajouter-button">Ajouter</a></p>
+                </div>
+                <div id="grid-vider">
+                    <p><a class="button" id="vider-button">Vider tableau</a></p>
+                </div>
             </form>
 
             <div class="overflow">
@@ -101,7 +112,7 @@
                     <div class="header">Sport</div>
                 </div>
             </div>
-           
+
         </div>
     </div>
 

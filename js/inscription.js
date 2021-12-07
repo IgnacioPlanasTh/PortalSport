@@ -5,7 +5,7 @@ annulerbutton.href = "javascript:vider()";
 let table = document.getElementById("table");
 
 function ajouter() {
-
+    
     // Creation de formData et obtention des valeurs
     let form = document.getElementById("formulaire");
     let formData = new FormData(form);

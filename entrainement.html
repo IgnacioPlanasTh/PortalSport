@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
     <title>
         Acueil
     </title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/entrainement.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/logo_icon.png">
 </head>
 
 <body>
 
-    <div id="menu">
+    <div class="sticky" id="menu">
         <div class="topnav" id="myTopnav">
-            <a id="Accueil-link"href="Accueil.html">Accueil</a>
+            <a id="menu-link" href="">Menu</a>
+            <a id="Accueil-link" href="Accueil.html">Accueil</a>
             <a id="Callisthenie-link" href="Callisthenie.html">Callisthenie</a>
-            <a id="Crossfit-link"href="Crossfit.html">Crossfit</a>
-            <a id="Fitness-link"href="Fitness.html">Fitness</a>
-            <a id="Running-link"href="Running.html">Running</a>
-            <a id="creerEntrainement-link"href="creerEntrainement.html">Créez votre entrainement</a>
+            <a id="Crossfit-link" href="Crossfit.html">Crossfit</a>
+            <a id="Fitness-link" href="Fitness.html">Fitness</a>
+            <a id="Running-link" href="Running.html">Running</a>
+            <a id="creerEntrainement-link" href="creerEntrainement.html">Créez votre entrainement</a>
             <a id="contact-link" href="contact.html">Contact</a>
+            <a id="inscription-link" href="Inscription.html">Inscrivez-vous</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -32,38 +37,28 @@
     <div class="grid-container-no-video">
         <div class="grid-leftLines grid-lines"></div>
         <div class="grid-rightLines grid-lines"></div>
-        <div class="grid-logo"><img class="logo" src="images/logo.png"></div>
-        <div class="grid-header"><h1>VOTRE ENTRAINEMENT</h1></div>
+        <div class="grid-logo"><img class="logo" src="images/logo.png" alt="logo"></div>
+        <div class="grid-header">
+            <h1>VOTRE ENTRAINEMENT</h1>
+        </div>
         <div class="grid-text">
             <div id="main"></div>
 
 
 
-           <div class="entrainement-grid-container" id="exercices">
+            <div class="entrainement-grid-container" id="exercices">
                 <div class="border-bottom border-white">.</div>
                 <div class="border-bottom border-white">GIF</div>
                 <div class="border-bottom border-white">EXERCICE</div>
                 <div class="border-bottom border-white">DURÉE</div>
                 <div class="border-bottom border-white">PAUSE</div>
-
-
-                <!-- <div>1</div>
-                <div><img class="img-responsive" src="images/entrainement/tractions.gif"></div>
-                <div>Tractions</div>
-                <div>3x12</div>
-                <div>1 min</div>
-                <div>2</div>
-                <div><img class="img-responsive" src="images/entrainement/pompes.gif"></div>
-                <div>Pompes</div>
-                <div>4x15</div>
-                <div>45 sec</div> -->
-           </div>
+            </div>
         </div>
     </div>
 
 
     <script src="js/menu.js"></script>
-    <script src ="js/entrainement.js"></script>
+    <script src="js/entrainement.js"></script>
 </body>
 
 </html>

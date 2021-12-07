@@ -1,16 +1,19 @@
-
 /* ====================================================== */
-/* General responsive structure of the website */ 
+/* General grid responsive structure of the website */ 
 /* ====================================================== */
+ /* all */
+*{box-sizing: border-box;}
 
-
+/* Grid areas */
 .grid-leftLines { grid-area: leftLines; }
 .grid-rightLines { grid-area: rightLines; }
-.grid-logo { grid-area: logo; }
-.grid-header { grid-area: header; margin-top: auto; margin-bottom: auto; }
-.grid-text { grid-area: main; }
-.grid-video{grid-area: video;}
+.grid-logo  { grid-area: logo;   margin-right: auto; margin-left: auto;}
+.grid-text  { grid-area: main;   margin-right: auto; margin-left: auto;}
+.grid-video { grid-area: video;  margin-right: auto; margin-left: auto;}
+.grid-header{ grid-area: header; margin:auto }
 
+
+/* Rose lines class */
 .grid-lines{
   background-image: repeating-linear-gradient(
     -60deg,
@@ -22,25 +25,22 @@
     padding-right: 50px;
     padding-left: 50px;
   }
+
+  /* grid container when screen < 780px*/
 .grid-container {
   display: grid;
   grid-template-areas:
     'leftLines leftLines leftLines'
-    'logo header header'
+    'logo logo logo'
+    'header header header'
     'main main main'
     'video video video'
     'rightLines rightLines rightLines ';
   grid-gap: 10px;
-  /* background-color: #2196F3; */
-  /* padding: 10px; */
-
-}
-.grid-container > .grid-logo,.grid-header,.grid-text,.grid-video{
-  margin-right: auto;
-  margin-left: auto;
 }
 
-    @media screen and (min-width: 780px) {
+/* Scalating when screen > 780px */
+@media screen and (min-width: 780px) {
   .grid-container {
     display: grid;
     grid-template-areas:
@@ -53,16 +53,17 @@
   }
 }
 
-
 /* ====================================================== */
 /* grid structure sans video */ 
 /* ====================================================== */
 
+/* Grid container when screen < 780px*/
 .grid-container-no-video {
   display: grid;
   grid-template-areas:
     'leftLines leftLines leftLines'
-    'logo header header'
+    'logo logo logo'
+    'header header header'
     'main main main'
     'rightLines rightLines rightLines ';
   grid-gap: 10px;
@@ -70,12 +71,8 @@
   /* padding: 10px; */
 
 }
-.grid-container-no-video > .grid-logo,.grid-header,.grid-text{
-  margin-right: auto;
-  margin-left: auto;
-}
 
-    @media screen and (min-width: 780px) {
+@media screen and (min-width: 780px) {
   .grid-container-no-video {
     display: grid;
     grid-template-areas:
@@ -89,54 +86,8 @@
 }
 
 /* ====================================================== */
-/* grid structure for the workout */ 
-/* ====================================================== */
-
-.entrainement-grid-container{
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  grid-gap: 0px;
-  border: 2px solid white;
-  border-radius: 20px;
-
-}
-.entrainement-grid-container >div{
-  margin-top: auto;
-  margin-bottom: auto;
-  text-align: center;
-  padding:20px;
-}
-
-
-/* ====================================================== */
-/* grid structure for the 4 sports on accueil.html */ 
-/* ====================================================== */
-.sports-grid-container{
-  display: grid;
-  grid-template-columns:auto;
-}
-@media screen and (min-width: 780px){
-  .sports-grid-container{
-    display: grid;
-    grid-template-columns:auto auto auto auto;
-  }
-}
-.sports-grid-container >div{
-  margin-top: auto;
-  margin-bottom: auto;
-  text-align: center;
-  padding:20px;
-}
-
-
-/* ====================================================== */
 /* cols and rows implementation */ 
 /* ====================================================== */
- 
- /* all */
-* {
-    box-sizing: border-box;
-  }
   /* mobile phones: */
   [class*="col-"] {
     width: 100%;
@@ -177,9 +128,6 @@ body{
 }
 .text-white{color:white}
 
-.color-1{background-color:#FF0080}
-.color-2{color:#FFFFFF}
-
 h1, h2, h3{
   text-align: center;
   margin-top: auto;
@@ -191,6 +139,7 @@ h1, h2, h3{
   max-width: 400px;
   height: auto;
 }
+
 .text-center{
   text-align: center;
 }
@@ -201,67 +150,57 @@ h1, h2, h3{
 }
 
 
+iframe{
+  border:none;
+}
 
-
-/* Borders */
+/* ====================================================== */
+/* Auxiliar classes */
+/* ====================================================== */
 .border{
   border-style: solid;
   border-color: black;
   border-width: 3px solid black;
 }
 .border-top{
-
   border-top: 3px solid black;
 }
+
 .border-bottom{
   border-bottom: 3px solid black;
 }
+
 .border-left{
   border-left: 3px solid black;
 }
+
 .border-right{
   border-right: 3px solid black;
 }
+
 .border-pink{
-  border-color: #FF0080!important;
+  border-color: #FF0080 !important;
 }
 .border-white{
-  border-color: white!important;
+  border-color: white !important;
 }
 .border-dark{
-  border-color: #333!important;
+  border-color: #333 !important;
 }
-  
-
-.w-auto{
-  width: fit-content;
-}
-
 
 .no-sub{
   text-decoration: none;
 }
 
+/* ====================================================== */
+/* Navigation menu */
+/* ====================================================== */
 
-.table-item{
-  background: #000;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-
-
-
-
-
-
-
-
-
-/* Add a black background color to the top navigation */
+/* Add a pink background color to the top navigation */
 .topnav {
   background-color: #FF0080;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 /* Style the links inside the navigation bar */
@@ -273,6 +212,7 @@ h1, h2, h3{
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  border-radius: 5px;
 }
 
 /* Change the color of links on hover */
@@ -293,8 +233,29 @@ h1, h2, h3{
   display: none;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* Hide the word "menu" when screen bigger than 780px */
+#menu-link{
+  display:none;
+}
+
+/* When the screen is less than 780 pixels wide, hide all links, except for the first one ("Menu"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 780px) {
+  .sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #FF0080;
+    padding: 20px;
+    z-index: 999;
+    border-radius:10px;
+  }
+  #menu-link{
+    display:block;
+  }
+  #menu-link:hover{
+    background-color: transparent;
+    color:white;
+  }
 
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {

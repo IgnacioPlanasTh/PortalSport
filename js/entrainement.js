@@ -45,9 +45,6 @@ let DIV = document.getElementById("main");
 if(sport==null || parsedPoids == null || parsedGoal==null) DIV.innerHTML=`<h3>S'il vous plait, choisisez d'abord l'entrainement sohuaité <a class="text-white" href="creerEntrainement.html">ici</a></h3><br>`
 else DIV.innerHTML= "<h3>Voici les resultats pour le sport '" + sport + "', le goal de " + parsedGoal + " pour le poids " + parsedPoids+"</h3><br>"; 
 
-
-
-
 let entrainement1=[
     ["Battle rope","3x15"],
     [ "Hip thrusts","5x5"],

@@ -1,0 +1,18 @@
+/* ====================================================== */
+/* grid structure for the workout */ 
+/* ====================================================== */
+
+.entrainement-grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 0px;
+    border: 2px solid white;
+    border-radius: 20px;
+  
+  }
+  .entrainement-grid-container >div{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    padding:20px;
+  }

@@ -1,0 +1,33 @@
+/* ====================================================== */
+/* grid structure for the 4 sports on accueil.html */ 
+/* ====================================================== */
+.sports-grid-container{
+    display: grid;
+    grid-template-columns:auto;
+  }
+  @media screen and (min-width: 780px){
+    .sports-grid-container{
+      display: grid;
+      grid-template-columns:auto auto auto auto;
+    }
+  }
+  .sports-grid-container >div{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    padding:20px;
+  }
+  
+  /* foto-accueil pour les 4 fotos de accueil.html */
+  .foto-accueil{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .foto-accueil:hover{
+    box-shadow: 0px 0px 80px black;
+    transform: rotate(0deg) scale(1.1,1.1) ;
+     transition: transform 300ms linear 0ms,
+            box-shadow 300ms linear 0ms;
+  }
+  

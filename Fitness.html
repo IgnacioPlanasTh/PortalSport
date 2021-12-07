@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
     <title>
         Fitness
     </title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/logo_icon.png">
 </head>
 
 <body>
 
-    <div id="menu">
+    <div class="sticky" id="menu">
         <div class="topnav" id="myTopnav">
-            <a id="Accueil-link"href="Accueil.html">Accueil</a>
+            <a id="menu-link" href="">Menu</a>
+            <a id="Accueil-link" href="Accueil.html">Accueil</a>
             <a id="Callisthenie-link" href="Callisthenie.html">Callisthenie</a>
-            <a id="Crossfit-link"href="Crossfit.html">Crossfit</a>
-            <a id="Fitness-link"href="Fitness.html">Fitness</a>
-            <a id="Running-link"href="Running.html">Running</a>
-            <a id="creerEntrainement-link"href="creerEntrainement.html">Créez votre entrainement</a>
+            <a id="Crossfit-link" href="Crossfit.html">Crossfit</a>
+            <a id="Fitness-link" href="Fitness.html">Fitness</a>
+            <a id="Running-link" href="Running.html">Running</a>
+            <a id="creerEntrainement-link" href="creerEntrainement.html">Créez votre entrainement</a>
             <a id="contact-link" href="contact.html">Contact</a>
+            <a id="inscription-link" href="Inscription.html">Inscrivez-vous</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -30,17 +34,27 @@
     <div class="grid-container">
         <div class="grid-leftLines grid-lines"></div>
         <div class="grid-rightLines grid-lines"></div>
-        <div class="grid-logo"><img class="logo" src="images/logo.png"></div>
-        <div class="grid-header"><h1>Qu'est ce que le fitness ?</h1></div>
-        <div class="grid-text"><p>Le fitness, aussi appelé la gymnastique de forme ou l'entraînement physique, désigne un ensemble d'activités physiques permettant au pratiquant d'améliorer sa condition physique et son hygiène de vie, dans un souci de bien-être.</p>
-            <p>Le fitness est l'activité idéale pour brûler des calories et redessiner sa silhouette. Quelle activité de fitness pratiquer ? Quelle fréquence ? Quels exercices pour quel objectif ? Retrouvez les meilleurs cours de fitness ici  et tous les exercices adaptés à votre niveau.</p>
+        <div class="grid-logo"><img class="logo" src="images/logo.png" alt="logo"></div>
+        <div class="grid-header">
+            <h1>Qu'est ce que le fitness ?</h1>
+        </div>
+        <div class="grid-text">
+            <p>Le fitness, aussi appelé la gymnastique de forme ou l'entraînement physique, désigne un ensemble
+                d'activités physiques permettant au pratiquant d'améliorer sa condition physique et son hygiène de vie,
+                dans un souci de bien-être.</p>
+            <p>Le fitness est l'activité idéale pour brûler des calories et redessiner sa silhouette. Quelle activité de
+                fitness pratiquer ? Quelle fréquence ? Quels exercices pour quel objectif ? Retrouvez les meilleurs
+                cours de fitness ici et tous les exercices adaptés à votre niveau.</p>
             <p>A vos marques, prêtes, transpirez !</p>
         </div>
-        <div class="grid-video"><iframe src="https://www.youtube.com/embed/yocBQadekho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="grid-video"><iframe src="https://www.youtube.com/embed/yocBQadekho" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
     </div>
     <p class="text-center">
-    <a class="no-sub text-white"" hre-f="creerEntrainement.html?entrainement=gym">Créer votre entrainement en cliquant ici</a> 
-</p>
+        <a class="no-sub text-white" href="creerEntrainement.html?entrainement=gym">Créer votre entrainement en cliquant
+            ici</a>
+    </p>
     <script src="js/menu.js"></script>
 </body>
 

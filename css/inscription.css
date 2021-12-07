@@ -44,6 +44,24 @@ input:hover, select:hover{
 form.form-grid-container div{
     padding: 1em;
 }
+.form-grid-container{
+    display: grid;
+    grid-template-areas: 
+    "nom"
+    "prenom"
+    "telephone"
+    "email"
+    "password"
+    "payment"
+    "sport"
+    "ajouter"
+    "annuler";
+    grid-gap: 5px;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
 
 @media screen and (min-width: 780px) {
     .form-grid-container{
@@ -57,7 +75,7 @@ form.form-grid-container div{
         grid-gap: 5px;
         border: 2px solid white;
         border-radius: 20px;
-        width:auto;
+        /* width:auto; */
     }
 
     form.form-grid-container div{

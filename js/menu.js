@@ -11,7 +11,6 @@ function myFunction() {
 let path = window.location.pathname;
 let page = path.split("/").pop();
 
-
 let A_accueil=document.getElementById("Accueil-link");
 let A_callisthenie=document.getElementById("Callisthenie-link");
 let A_gym=document.getElementById("Fitness-link");
@@ -19,6 +18,7 @@ let A_running=document.getElementById("Running-link");
 let A_crossfit=document.getElementById("Crossfit-link");
 let A_aPropos=document.getElementById("contact-link");
 let A_creerEntrainement=document.getElementById("creerEntrainement-link");
+let A_inscription=document.getElementById("inscription-link");
 
 if(page==="Accueil.html"){
     A_accueil.className+=" active";
@@ -34,7 +34,8 @@ if(page==="Accueil.html"){
     A_creerEntrainement.className+=" active";
 }else if(page==="contact.html"){
     A_aPropos.className+=" active";
+}else if(page==="Inscription.html"){
+    A_inscription.className+=" active";
+}else{
+    console.log("Mauvaise site web");
 }
-
-// console.log(A_aPropos,A_accueil,A_callisthenie,A_creerEntrainement,A_gym,A_running,A_crossfit);
-
