@@ -3,6 +3,7 @@
 let exercices=
 
 
+
 {"Pompes":"pompes.gif",
 'Tractions':'tractions.gif',
 'Squats':'squats.gif',
@@ -13,7 +14,13 @@ let exercices=
 "Elevations frontales":"elevationsFrontales.gif",
 "Battle rope":"battleRope.gif",
 "Rameur":"rameur.gif",
-"":"",
+"air-squat":"airSquatCAL.gif;",
+"Mountain climbers":"images.gif"
+"Burpee":"Burpee.gif",
+"squats sautés":"squatsSautés.gif",
+"Fentes sautées":"fentesSautées.gif",
+"V-ups":"v-ups.gif",
+
 };
 
 
