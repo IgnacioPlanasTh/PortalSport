@@ -8,9 +8,13 @@ function myFunction() {
     }
 }
 
+// Marquer comme "active" la page web dans laquelle on est
+
+// Obtenir le nom de la page
 let path = window.location.pathname;
 let page = path.split("/").pop();
 
+// Recuperer les links
 let A_accueil=document.getElementById("Accueil-link");
 let A_callisthenie=document.getElementById("Callisthenie-link");
 let A_gym=document.getElementById("Fitness-link");
@@ -20,6 +24,7 @@ let A_aPropos=document.getElementById("contact-link");
 let A_creerEntrainement=document.getElementById("creerEntrainement-link");
 let A_inscription=document.getElementById("inscription-link");
 
+// Marquer comme "active" la page
 if(page==="Accueil.html"){
     A_accueil.className+=" active";
 }else if(page==="Callisthenie.html"){

@@ -1,9 +1,5 @@
-"use strict"
-
+// Dictionnaire avec tous les exercices qu'on a dans notre site
 let exercices=
-
-
-
 {"Pompes":"pompes.gif",
 'Tractions':'tractions.gif',
 'Squats':'squats.gif',
@@ -28,25 +24,38 @@ let exercices=
 
 
 
-
+// obtenir les parametres donnés dans l'url
 let urlParams = new URLSearchParams(window.location.search);
 let sport= urlParams.get("sport");
 let goal= urlParams.get("goal");
 let poids= urlParams.get("poids");
 
+// Parse le valeur de l'objectif
 let parsedGoal=null;
 if(goal=="gagnerMuscle") parsedGoal="gagner muscle";
 else if(goal="perdrePoids") parsedGoal="perdre poids";
 
+// Parse le valeur du poids
 let parsedPoids=null;
 if(poids=="poids-1")parsedPoids="-45kg";
 else if(poids=="poids-2")parsedPoids="45-70kg";
 else if(poids=="poids-3")parsedPoids="+70kg";
 
+// Recuperer le div #main
 let DIV = document.getElementById("main");
+
+// S'il y a eu un erreur ou la page web n'est pas acces depuis le formulaire pertinent, montrer un erreur
 if(sport==null || parsedPoids == null || parsedGoal==null) DIV.innerHTML=`<h3>S'il vous plait, choisisez d'abord l'entrainement sohuaité <a class="text-white" href="creerEntrainement.html">ici</a></h3><br>`
+
+
+// Sinon montrer les parametres donnés
 else DIV.innerHTML= "<h3>Voici les resultats pour le sport '" + sport + "', le goal de " + parsedGoal + " pour le poids " + parsedPoids+"</h3><br>"; 
 
+
+
+// =====================================================================================000
+// Definition de les differents entrainements
+// Un entrainement est une liste d'exercices, chaque exercice a: nom, numero de repetitions, pause entre sets
 let entrainement1=[
     ["Battle rope","3x15","1min"],
     [ "Hip thrusts","5x5","1min"],
@@ -62,6 +71,8 @@ let entrainement1=[
 
 showEntrainement(entrainement2);
 
+
+// Montrer un entrainement selon les parametres donnés(poids, objectif, sport)
 function showEntrainement(entrainement){
     let exercicesDIV=document.getElementById("exercices");
     // exercicesDIV.innerHTML="";
@@ -82,6 +93,7 @@ function showEntrainement(entrainement){
     }
 }
 
+// fonction auxiliaire pour créer html
 function parseHTML(str) {
     let tmp = document.implementation.createHTMLDocument();
     tmp.body.innerHTML = str;

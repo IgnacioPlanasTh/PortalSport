@@ -116,6 +116,7 @@ function ajouter() {
     }
 }
 
+// Vider le tableau
 function vider() {
     let confirmation = confirm("voulezz vous vraiment vider le tableau?");
 
