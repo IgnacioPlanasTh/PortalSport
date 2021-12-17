@@ -15,7 +15,7 @@ let exercices=
 "Battle rope":"battleRope.gif",
 "Rameur":"rameur.gif",
 "air-squat":"airSquatCAL.gif;",
-"Mountain climbers":"images.gif"
+"Mountain climbers":"images.gif",
 "Burpee":"Burpee.gif",
 "squats sautés":"squatsSautés.gif",
 "Fentes sautées":"fentesSautées.gif",
@@ -48,16 +48,16 @@ if(sport==null || parsedPoids == null || parsedGoal==null) DIV.innerHTML=`<h3>S'
 else DIV.innerHTML= "<h3>Voici les resultats pour le sport '" + sport + "', le goal de " + parsedGoal + " pour le poids " + parsedPoids+"</h3><br>"; 
 
 let entrainement1=[
-    ["Battle rope","3x15"],
-    [ "Hip thrusts","5x5"],
-    ["Tractions","4x8"], 
-    ["Soulevées de terre","4x10"]];
+    ["Battle rope","3x15","1min"],
+    [ "Hip thrusts","5x5","1min"],
+    ["Tractions","4x8","1min"], 
+    ["Soulevées de terre","4x10","1min"]];
 
     let entrainement2=[
-        ["Hip thrusts","4x15"],
-        ["Tractions","5x5"],
-        ["Tractions","4x8"], 
-        ["Bench press","4x10"]];
+        ["Hip thrusts","4x15","1min"],
+        ["Tractions","5x5","1min"],
+        ["Tractions","4x8","1min"], 
+        ["Bench press","4x10","1min"]];
 
 
 showEntrainement(entrainement2);
@@ -71,7 +71,7 @@ function showEntrainement(entrainement){
         let div1=parseHTML('<div><img class="img-responsive" src="images/entrainement/' + exercices[exercice[0]] + '"></div>');
         let div2=parseHTML("<div>" + exercice[0] + "</div>");
         let div3=parseHTML("<div>" + exercice[1] + "</div>");
-        let div4=parseHTML("<div>1min</div>");
+        let div4=parseHTML("<div>" + exercice[2] + "</div>");
         exercicesDIV.appendChild(div0);
         exercicesDIV.appendChild(div1);
         exercicesDIV.appendChild(div2);
